@@ -5,12 +5,13 @@ import {
     Routes,
     Route,
     Link,
-  } from "react-router-dom";
+} from "react-router-dom";
 
 import About from "../../Pages/About/about"
+import Home from "../../Pages/Home/home"
 function Footer() {
     return (
-        <div id="footerContainer">
+        <div id="footerContainer" className="#424242 grey darken-3">
             <footer class="page-footer">
                 <div class="container">
                     <h4 className="franklin">Daniel Jauregui</h4>
@@ -19,7 +20,6 @@ function Footer() {
                         <div className="col l3 franklin"><Link to="contact" className="white-text">Contact</Link></div>
                         <div className="col l3 franklin"><Link to="projects" className="white-text">Projects</Link></div>
                         <div className="col l3 franklin"><Link to="github" className="white-text">Github</Link></div>
-
                     </div>
                 </div>
                 <div class="footer-copyright">
