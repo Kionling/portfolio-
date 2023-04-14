@@ -1,13 +1,23 @@
 import logo from './logo.svg';
 // import './App.css';
 import Footer from "../src/Components/Footer/footer"
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import About from "./Pages/About/about"
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <Footer/>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/about" element={<About/>} />
+        {/* <Route path='*' element={<Home/>}></Route> */}
+        
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
