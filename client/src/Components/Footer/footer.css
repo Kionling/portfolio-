@@ -1,12 +1,30 @@
 
-@import url('https://fonts.cdnfonts.com/css/franklin-gothic?styles=17611,17609,17610');
 
-
+/* 
 .franklin {
     font-family: 'Franklin Gothic', sans-serif;
 
-}
+} */
 
 #linkList {
     font-size: 25px ;
+}
+
+#footerLI{
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 0;
+    
+}
+#footerTitle{
+    font-weight: 800;
+
+}
+
+#lowerSec{
+    padding: 0px 0px 30px 0px;
+}
+
+#aboutLi{
+    padding-left: 0;
 }
