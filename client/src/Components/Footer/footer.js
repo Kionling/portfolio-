@@ -11,29 +11,31 @@ import About from "../../Pages/About/about"
 import Home from "../../Pages/Home/home"
 function Footer() {
     return (
-        <div id="footerContainer" className="#424242 grey darken-3">
-            <footer class="page-footer #424242 grey darken-3">
-                <div class="container">
-                    {/* <h4 className="franklin" id="footerTitle">More Links</h4> */}
-                    <div className="row" id="footerLI">
-                        <div className="col l2 franklin" id="aboutLI"><Link to="about" className="white-text">About</Link></div>
-                        <div className="col l2 franklin"><Link to="contact" className="white-text">Contact</Link></div>
-                        <div className="col l2 franklin"><Link to="projects" className="white-text">Projects</Link></div>
-                        <div className="col l2 franklin"><Link to="github" className="white-text">Github</Link></div>
+        <footer className="page-footer #7c4dff deep-purple accent-2">
+            <div className="container">
+                <div className="row">
+                    <div className="col l6 s12">
+                        <h5 className="white-text">Daniel Jauregui</h5>
+                        <p className="grey-text text-lighten-4">Full Stack Developer/Software Engineer</p>
+                    </div>
+                    <div className="col l4 offset-l2 s12">
+                        <h5 className="white-text">Support me!</h5>
+                        <ul>
+                            <li><a className="grey-text text-lighten-3" href="https://www.linkedin.com/in/kionling/" target="_blank">LinkedIn</a></li>
+                            <li><a className="grey-text text-lighten-3" href="https://github.com/Kionling" target="_blank">Github</a></li>
+                            <li><a className="grey-text text-lighten-3" href="https://www.buymeacoffee.com/Kionlingg">Buy Me Coffee!</a></li>
+                           
+                        </ul>
                     </div>
                 </div>
+            </div>
+            <div className="footer-copyright">
                 <div className="container">
-                    <p>Full Stack Developer/Software Engineer</p>
+                    © 2023 Daniel Jauregui
+                    <a className="grey-text text-lighten-4 right" href="#!">More Links</a>
                 </div>
-                <div id="lowerSec" className="#424242 grey darken-3">
-                    <div class="container #424242 grey-text ">
-                        © 2023 Daniel Jauregui
-                        <a class="grey-text right" href="#!">More Links</a>
-                    </div>
-                </div>
-            </footer>
-
-        </div>
+            </div>
+        </footer>
     )
 }
 
