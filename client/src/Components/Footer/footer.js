@@ -6,9 +6,6 @@ import {
     Route,
     Link,
 } from "react-router-dom";
-
-import About from "../../Pages/About/about"
-import Home from "../../Pages/Home/home"
 function Footer() {
     return (
         <footer className="page-footer #7c4dff deep-purple accent-2">

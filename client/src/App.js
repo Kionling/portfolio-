@@ -5,6 +5,7 @@ import About from "./Pages/About/about"
 import Home from "./Pages/Home/home"
 import Navbar from './Components/Navbar/navBar';
 import Portfolio from './Pages/Portfolio/portfolio';
+import Contact  from './Pages/Contact/contact';
 import {
   BrowserRouter as Router,
   Routes,
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/portfolio' element={<Portfolio/>}/>
         <Route exact path="/about" element={<About />} />
         <Route exact path="*" element={<Home />} />
+        <Route exact path='/contact' element={<Contact/>}/>
       </Routes>
       <Footer />
     </Router>
