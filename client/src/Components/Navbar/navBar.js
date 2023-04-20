@@ -42,7 +42,7 @@ function Navbar() {
                         <a href="#" className="brand-logo center"></a>
                         <ul id="nav-mobile" className="left">
                             {navLinks.map((link) => (
-                                <li key={link.path} className={link.isActive ? 'active' : 'false'}>
+                                <li key={link.path}>
                                     <Link to={link.path} className="black-text franklin">{link.label}</Link>
                                 </li>
                             ))}
