@@ -1,0 +1,7 @@
+#mainBanner{
+    height: 400px;
+    background-image: url(../Home/assets/chanceCompressed.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
