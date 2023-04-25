@@ -6,6 +6,7 @@ import Home from "./Pages/Home/home"
 import Navbar from './Components/Navbar/navBar';
 import Portfolio from './Pages/Portfolio/portfolio';
 import Contact  from './Pages/Contact/contact';
+import Today from './Components/Moment/moment';
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,6 +16,7 @@ import {
 function App() {
   return (
     <Router>
+      <Today/>
       <Navbar/>
       <Routes>
         

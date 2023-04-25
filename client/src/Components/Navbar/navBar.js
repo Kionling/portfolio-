@@ -37,13 +37,13 @@ function Navbar() {
                         </h3>
                     </div>
                 </div>
-                <nav className="z-depth-0">
-                    <div className="nav-wrapper #ffffff white ">
-                        <a href="#" className="brand-logo center"></a>
-                        <ul id="nav-mobile" className="left">
+                <nav className="z-depth-0 #ffffff white">
+                    <div className="#ffffff white">
+                        
+                        <ul id="nav-mobile" className="left z-depth-0">
                             {navLinks.map((link) => (
                                 <li key={link.path}>
-                                    <Link to={link.path} className="black-text franklin">{link.label}</Link>
+                                    <Link to={link.path} className="black-text bold z-depth-0">{link.label}</Link>
                                 </li>
                             ))}
 
