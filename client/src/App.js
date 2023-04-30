@@ -16,7 +16,7 @@ import {
 function App() {
   return (
     <Router>
-      <Today/>
+      {/* <Today/> */}
       <Navbar/>
       <Routes>
         

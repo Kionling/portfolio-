@@ -5,24 +5,25 @@ import "./navbar.css"
 
 function Navbar() {
     const [navLinks, setNavLinks] = useState([
-        { path: '/portfolio', label: 'Portfolio', isActive: false },
-        { path: '/about', label: 'About', isActive: false },
-        { path: '/contact', label: 'Contact', isActive: false },
-      ]);
+        { path: '/portfolio', label: 'Portfolio', isActive: false, className: "" },
+        { path: '/about', label: 'About', isActive: false, className: ""},
+        { path: '/contact', label: 'Contact', isActive: false, className: "" },
+      ]);           
       const location = useLocation();
-    //   console.log(isActive)
-    
+    //   console.log(isActive
       useEffect(() => {
         // Update the navLinks array based on the current URL path
         const newNavLinks = navLinks.map((link) => {
           if (link.path === location.pathname) {
-            return { ...link, isActive: true };
+            return { ...link, className: "noActive", isActive: false };
           } else {
-            return { ...link, isActive: false };
+            return { ...link, className: "simo", isActive: false};
           }
         });
         setNavLinks(newNavLinks);
       }, [location]);
+      const currentPage = window.location.pathname
+      console.log(currentPage)     
     
     return (
         <div>
@@ -42,7 +43,7 @@ function Navbar() {
                         
                         <ul id="nav-mobile" className="left z-depth-0">
                             {navLinks.map((link) => (
-                                <li key={link.path}>
+                                <li key={link.path} className={link.className}>
                                     <Link to={link.path} className="black-text bold z-depth-0">{link.label}</Link>
                                 </li>
                             ))}

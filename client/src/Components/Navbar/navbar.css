@@ -6,3 +6,8 @@
     font-weight: 900;
     font-size: 20px;
 }
+
+
+.noActive {
+    display: none;
+}
