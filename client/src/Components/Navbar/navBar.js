@@ -5,25 +5,23 @@ import "./navbar.css"
 
 function Navbar() {
     const [navLinks, setNavLinks] = useState([
-        { path: '/portfolio', label: 'Portfolio', isActive: false, className: "" },
-        { path: '/about', label: 'About', isActive: false, className: ""},
-        { path: '/contact', label: 'Contact', isActive: false, className: "" },
+        { path: '/portfolio', label: 'Portfolio',  className: "" },
+        { path: '/about', label: 'About',  className: ""},
+        { path: '/contact', label: 'Contact', className: "" },
       ]);           
       const location = useLocation();
-    //   console.log(isActive
       useEffect(() => {
         // Update the navLinks array based on the current URL path
         const newNavLinks = navLinks.map((link) => {
           if (link.path === location.pathname) {
-            return { ...link, className: "noActive", isActive: false };
+            return { ...link, className: "noActive" };
           } else {
-            return { ...link, className: "simo", isActive: false};
+            return { ...link, className: ""};
           }
         });
         setNavLinks(newNavLinks);
       }, [location]);
-      const currentPage = window.location.pathname
-      console.log(currentPage)     
+         
     
     return (
         <div>
