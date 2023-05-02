@@ -44,3 +44,37 @@
   height: 250px;
   margin: 0;
 }
+
+#firstImage{
+  background-image: url(../Home/assets/codecode-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+
+}
+
+
+#secondBanner{
+  height: 250px;
+  margin: 0;
+}
+
+
+#thirdBanner{
+  height: 250px;
+  margin: 0;
+}
+
+
+#banTxt{
+  font-size: 40px;
+}
+
+#secondImage{
+  height: 250px;
+  background-size: cover;
+  background-image: url(../Home/assets/nostalgia.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
