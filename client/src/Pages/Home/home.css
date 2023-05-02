@@ -1,37 +1,45 @@
-
-#mainBanner{
-    height: 400px;
-    background-image: url(../Home/assets/chanceCompressed.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+#mainBanner {
+  height: 400px;
+  background-image: url(../Home/assets/chanceCompressed.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .bold {
-    font-weight: 900;
-    font-size: 35px;
+  font-weight: 900;
+  font-size: 35px;
 }
 
-.centerText{
-    text-align: center;
-    display: flex;
+.centerText {
+  text-align: center;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 #period {
-
-    animation: color-change 1s infinite;
-   
+  animation: color-change 1s infinite;
 }
 
-
 @keyframes color-change {
-    0% { color: #4285F4; }
-    25% { color:#DB4437; }
-    50% { color: #F4B400; }
-    75% { color: #0F9D58; }
-    100% { color: #4285F4; }
+  0% {
+    color: #4285f4;
   }
+  25% {
+    color: #db4437;
+  }
+  50% {
+    color: #f4b400;
+  }
+  75% {
+    color: #0f9d58;
+  }
+  100% {
+    color: #4285f4;
+  }
+}
 
-
+#firstBanner {
+  height: 200px;
+}
