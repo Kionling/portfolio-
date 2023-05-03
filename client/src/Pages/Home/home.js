@@ -38,9 +38,10 @@ function Home() {
             </p>
           </div>
         </div>
-        <div className=" col s8 l8" id="firstImage"></div>
+        <div className="col s8 l8" id="firstImage"></div>
       </div>
-      
+      <div className="row" id="lastBanner">
+      </div>
     </div>
   );
 }

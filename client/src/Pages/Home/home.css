@@ -78,3 +78,17 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+#lastBanner{
+  height: 350px;
+  background-size: cover;
+  background-image: url(../Home/assets/ramen.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+
+#lastGif{
+  margin: 0;
+}
