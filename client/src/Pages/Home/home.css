@@ -97,5 +97,9 @@
 
 
 #firstTxt{
-  font-weight: 700;
+  font-weight: 900;
+}
+
+#firstBanText{
+margin: 0;
 }
