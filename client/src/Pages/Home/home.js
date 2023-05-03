@@ -4,12 +4,12 @@ import "./home.css";
 import nostalgia from "../Home/assets/nostalgia.jpg";
 function Home() {
   return (
-    <div id="overallBanner">
+    <div>
       <div id="mainBanner">
         <div className="row bold centerText" id="firstBanText">
-          <h4 className="white-text bold">
+          <h3 className="white-text" id="firstTxt">
             The Newest Project<span id="period">.</span>
-          </h4>
+          </h3>
         </div>
       </div>
       <div className="row #ff1744 red accent-3" id="firstBanner">
@@ -41,6 +41,7 @@ function Home() {
         <div className="col s8 l8" id="firstImage"></div>
       </div>
       <div className="row" id="lastBanner">
+        <h1 className="white-text" id="peaceTag">Peace<span id="period">.</span></h1>
       </div>
     </div>
   );

@@ -89,6 +89,13 @@
 }
 
 
-#lastGif{
+#peaceTag{
   margin: 0;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+
+#firstTxt{
+  font-weight: 700;
 }
