@@ -1,13 +1,21 @@
 #nav-banner {
     font-weight: 900;
-    
+    font-size: 75px;
+
 }
-.bold {
-    font-weight: 900;
-    font-size: 20px;
+.boldER {
+    font-weight: 800 ;
+    font-size: 25px;
+    margin-right: 30px;
+    letter-spacing: -0.5px;
 }
 
 
 .noActive {
     display: none;
 }
+
+/* #parent{
+    margin-bottom: 23px;
+} */
+
