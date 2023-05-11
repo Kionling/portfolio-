@@ -2,3 +2,52 @@
     margin: 0;
     height: 250px;
 }
+
+.bold800 {
+    font-weight: 800;
+}
+
+#AboutNav {
+    font-weight: 900;
+    color: black;
+    font-size: 60px;
+}
+#aboutBanner {
+    margin: 0;
+    height: 500px;
+}
+
+#AboutDiv {
+    height: 500px;
+}
+
+
+.centerText {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#from {
+font-weight: 900;
+margin-top: 9%;
+margin-left: 23%;
+font-size: 3em;
+}
+
+#mainContent {
+font-weight: 900;
+margin-left: 23%;
+font-size: 3em;
+}
+
+#bottomParagraph {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+#AboutFooter {
+margin-top: 250px;
+}
