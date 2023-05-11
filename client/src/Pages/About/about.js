@@ -5,17 +5,17 @@ function About() {
   return (
     <div>
       <div className=" #000000 black centerText" id="aboutBanner">
-        
+
         <div className="center">
           <div className="row">
             <div className="col s12 l12">
-            <h3 className="bold800 white-text">Born in San Jose, California</h3>
+              <h3 className="bold800 white-text">Born in San Jose, California</h3>
 
             </div>
           </div>
           <div className="row">
             <div className="col s12 l12">
-            <h3 className="bold800 white-text">Raised in Lathrop, California</h3>
+              <h3 className="bold800 white-text">Raised in Lathrop, California</h3>
 
             </div>
           </div>
@@ -50,7 +50,7 @@ function About() {
         <h3 className="bold800">Currently a Computer Science Major at San Joaquin Delta College.</h3>
         <p className="bold800">To satisy my passion and interest behind the science of Software Engineering, </p>
         <p className="bold800">
-        I am continuing my studies at SJDC and looking to transfer to colleges in the Bay area to continue my coding journey.
+          I am continuing my studies at SJDC and looking to transfer to colleges in the Bay area to continue my coding journey.
         </p>
       </div>
     </div>
