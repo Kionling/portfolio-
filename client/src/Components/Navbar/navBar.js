@@ -4,9 +4,9 @@ import "./navbar.css";
 
 function Navbar() {
   const [navLinks, setNavLinks] = useState([
-    { path: "/portfolio", label: "Portfolio", className: "", id: "navElement"},
-    { path: "/about", label: "About", className: "", id: "navElement"},
-    { path: "/contact", label: "Contact", className: "", id: "navElement"},
+    { path: "/portfolio", label: "Portfolio", className: ""},
+    { path: "/about", label: "About", className: ""},
+    { path: "/contact", label: "Contact", className: ""},
   ]);
   const location = useLocation();
   useEffect(() => {
@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <div>
-      <div className="container" id="parent">
+      <div className="container" >
         <div className="row">
           <div className="col s9">
             <h3 id="nav-banner">
@@ -37,7 +37,7 @@ function Navbar() {
           <div className="#ffffff white">
             <ul id="nav-mobile" className="left z-depth-0">
               {navLinks.map((link) => (
-                <li id={link.id} key={link.path} className={link.className}>
+                <li key={link.path} className={link.className}>
                   <Link to={link.path} className="black-text boldER z-depth-0">
                     {link.label}
                   </Link>
