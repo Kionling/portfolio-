@@ -1,3 +1,7 @@
+@import url(//db.onlinewebfonts.com/c/da302048d26e815edc9f6180266088a4?family=MoMA+Sans+Web+Regular);
+@font-face {font-family: "MoMA Sans Web Regular"; src: url("//db.onlinewebfonts.com/t/da302048d26e815edc9f6180266088a4.eot"); src: url("//db.onlinewebfonts.com/t/da302048d26e815edc9f6180266088a4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/da302048d26e815edc9f6180266088a4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/da302048d26e815edc9f6180266088a4.woff") format("woff"), url("//db.onlinewebfonts.com/t/da302048d26e815edc9f6180266088a4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/da302048d26e815edc9f6180266088a4.svg#MoMA Sans Web Regular") format("svg"); }
+@import url('https://fonts.cdnfonts.com/css/mona-sans?styles=144325,144317');
+
 #mainBanner {
   height: 400px;
   background-image: url(../Home/assets/chanceCompressed.jpeg);
@@ -68,7 +72,10 @@
 
 
 #banTxt{
-  font-size: 40px;
+  font-size: 45px;
+  font-family: 'Mona-Sans', sans-serif;
+  letter-spacing: -2px;
+  font-family: 'Mona Sans', sans-serif;
 }
 
 #secondImage{

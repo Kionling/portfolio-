@@ -16,7 +16,7 @@ function Home() {
         <div className="col s4 l4">
           <div className="container">
             <p className="bold centerText" id="banTxt">
-              Explore
+              Explore my projects. 
             </p>
           </div>
         </div>
