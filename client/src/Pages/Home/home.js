@@ -13,15 +13,15 @@ function Home() {
         </div>
       </div>
       <div className="row #ff1744 red accent-3" id="firstBanner">
-        <div className="col s7 l4">
+        <div id="textDiv" className="col s7 l4">
           <div className="container">
           <div className="row">
-            <div className="col s12 l12">
-            <h3 className="rightHand" id="banTxt">
+            <div className="col s12 l9">
+            <h3 className="" id="banTxt">
               Browse: The latest projects
             </h3>
             </div>
-            <div><p>Browse my latest projects on Github</p></div>
+            <div className=" col s12 l6 offset-l8"><p id="subtitles">Explore the latest projects on my github</p></div>
           </div>
           
         

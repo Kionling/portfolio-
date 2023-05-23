@@ -131,3 +131,14 @@
 #firstBanText{
 margin: 0;
 }
+
+#subtitles{
+  padding-top: 30px;
+  font-family: 'Franklin Gothic', sans-serif;
+  font-size: 24px;
+  line-height: 20px;
+  margin: 0;
+}
+#textDiv{
+  height: maxå-content;
+}
