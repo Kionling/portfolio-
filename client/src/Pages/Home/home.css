@@ -1,6 +1,5 @@
-@import url(//db.onlinewebfonts.com/c/da302048d26e815edc9f6180266088a4?family=MoMA+Sans+Web+Regular);
-@font-face {font-family: "MoMA Sans Web Regular"; src: url("//db.onlinewebfonts.com/t/da302048d26e815edc9f6180266088a4.eot"); src: url("//db.onlinewebfonts.com/t/da302048d26e815edc9f6180266088a4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/da302048d26e815edc9f6180266088a4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/da302048d26e815edc9f6180266088a4.woff") format("woff"), url("//db.onlinewebfonts.com/t/da302048d26e815edc9f6180266088a4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/da302048d26e815edc9f6180266088a4.svg#MoMA Sans Web Regular") format("svg"); }
-@import url('https://fonts.cdnfonts.com/css/mona-sans?styles=144325,144317');
+@import url('https://fonts.cdnfonts.com/css/franklin-gothic');
+
 
 #mainBanner {
   height: 400px;
@@ -64,7 +63,6 @@
   margin: 0;
 }
 
-
 #thirdBanner{
   height: 250px;
   margin: 0;
@@ -72,10 +70,35 @@
 
 
 #banTxt{
-  font-size: 45px;
-  font-family: 'Mona-Sans', sans-serif;
-  letter-spacing: -2px;
-  font-family: 'Mona Sans', sans-serif;
+  /* font-size: 300%; */
+  font-family: 'Franklin Gothic', sans-serif;
+  margin-top: 30px;
+  width: 50%;
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  line-height: 1em; /* a */
+  max-height: 2em;
+  
+}
+
+.rightHand{
+  text-align: right;
+}
+
+#leftHand{
+  font-family: 'Franklin Gothic', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding-left: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  line-height: 1em; /* a */
+  max-height: 3em;
 }
 
 #secondImage{
@@ -98,13 +121,15 @@
 
 #peaceTag{
   margin: 0;
-  font-weight: 700;
   padding-left: 10px;
+  font-family: 'Franklin Gothic', sans-serif;
 }
 
 
 #firstTxt{
-  font-weight: 900;
+  
+  font-family: 'Franklin Gothic', sans-serif;
+
 }
 
 #firstBanText{

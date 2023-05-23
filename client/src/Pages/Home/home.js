@@ -14,10 +14,11 @@ function Home() {
       </div>
       <div className="row #ff1744 red accent-3" id="firstBanner">
         <div className="col s4 l4">
-          <div className="container">
-            <p className="bold centerText" id="banTxt">
-              Explore my projects. 
-            </p>
+          <div className="">
+          <h3 className="" id="banTxt">
+              Browse: The latest projects
+            </h3>
+        
           </div>
         </div>
         <div className=" col s8 l8" id="firstImage"></div>
@@ -25,17 +26,17 @@ function Home() {
       <div className="row #aa00ff purple accent-4" id="secondBanner">
         <div className="col s8 l8" id="secondImage"></div>
         <div className=" container col s4 l4">
-          <p className=" bold centerText" id="banTxt">
-            Explore
-          </p>
+          <h3 id="leftHand">
+            Contact me!
+          </h3>
         </div>
       </div>
       <div className="row #651fff deep-purple accent-3" id="thirdBanner">
         <div className="col s4 l4">
           <div className="container">
-            <p className="bold centerText" id="banTxt">
+            <h3 className=" center" id="banTxt">
               Explore
-            </p>
+            </h3>
           </div>
         </div>
         <div className="col s8 l8" id="firstImage"></div>
