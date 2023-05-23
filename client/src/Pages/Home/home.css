@@ -70,12 +70,8 @@
 
 
 #banTxt{
-  font-size: 300%;
   font-family: 'Franklin Gothic', sans-serif;
-  margin-top: 30px;
-  width: 50%;
-  margin-bottom: 0;
-  overflow: hidden;
+  
   text-overflow: ellipsis;
   word-wrap: break-word;
   display: block;
