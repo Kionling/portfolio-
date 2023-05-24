@@ -86,15 +86,9 @@
 
 #leftHand{
   font-family: 'Franklin Gothic', sans-serif;
-  margin-top: 30px;
-  margin-bottom: 0;
-  padding-left: 20px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  display: block;
-  line-height: 1em; /* a */
-  max-height: 3em;
+  line-height: 0.9em; /* a */
+  max-height: 1em;
+  padding-left:23px;
 }
 
 #secondImage{
@@ -130,7 +124,7 @@
 
 #firstBanText{
 margin: 0;
-display: contents;
+
 }
 
 #subtitles{
@@ -140,6 +134,13 @@ display: contents;
   line-height: 20px;
   margin: 0;
 }
-#textDiv{
-  height: maxå-content;
+
+
+#subtitles2{
+  font-size: 24px;
+  font-family: 'Franklin Gothic', sans-serif;
+  line-height: 20px;
+  padding-top: 40px;
+  padding-left: 30px;
+  max-height: 1em;
 }
