@@ -49,7 +49,7 @@ function Home() {
         <div id="textDiv" className="col s7 l4">
           <div className="container">
             <div className="row">
-              <div className="col s12 l9">
+              <div className="col s12 l8">
                 <h3 className="" id="banTxt">
                   Learn More About Me
                 </h3>
@@ -68,9 +68,11 @@ function Home() {
 
 
       <div className="row" id="lastBanner">
-        <h1 className="white-text" id="peaceTag">
+       <div className="col s12 l12">
+       <h1 className="white-text" id="peaceTag">
           Peace<span id="period">.</span>
         </h1>
+       </div>
       </div>
     </div>
   );
