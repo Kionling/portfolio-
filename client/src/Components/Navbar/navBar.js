@@ -1,7 +1,7 @@
-import { React, useEffect, useState } from "react";
+import { React, useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
-
+import { DarkModeContext } from "../darkMode/darkModeContext";
 function Navbar() {
   const [navLinks, setNavLinks] = useState([
     { path: "/portfolio", label: "Portfolio", className: ""},
@@ -20,9 +20,9 @@ function Navbar() {
     });
     setNavLinks(newNavLinks);
   }, [location]);
-
+const {darkMode} = useContext(DarkModeContext)
   return (
-    <div>
+    <div className={darkMode ? 'dark ' : 'light'}>
       <div className="container" >
         <div className="row">
           <div className="col s9">
@@ -33,6 +33,7 @@ function Navbar() {
             </h3>
           </div>
         </div>
+        <div className={darkMode ? 'dark ' : 'light'}>
         <nav className="z-depth-0 #ffffff white">
           <div className="#ffffff white">
             <ul id="nav-mobile" className="left z-depth-0">
@@ -46,6 +47,7 @@ function Navbar() {
             </ul>
           </div>
         </nav>
+        </div>
       </div>
     </div>
   );
