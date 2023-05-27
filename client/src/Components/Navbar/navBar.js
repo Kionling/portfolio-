@@ -22,7 +22,7 @@ function Navbar() {
   }, [location]);
 const {darkMode} = useContext(DarkModeContext)
   return (
-    <div className={darkMode ? 'dark ' : 'light'}>
+    <div className="">
       <div className="container" >
         <div className="row">
           <div className="col s9">
@@ -33,7 +33,7 @@ const {darkMode} = useContext(DarkModeContext)
             </h3>
           </div>
         </div>
-        <div className={darkMode ? 'dark ' : 'light'}>
+        <div className="">
         <nav className="z-depth-0 #ffffff white">
           <div className="#ffffff white">
             <ul id="nav-mobile" className="left z-depth-0">

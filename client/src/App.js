@@ -18,7 +18,7 @@ function App() {
   return (
     <DarkModeProvider>
     <Router>
-      <ExampleComponent/>
+      {/* <ExampleComponent/> */}
       <Navbar/>
       <Routes>
         <Route exact path='/portfolio' element={<Portfolio/>}/>
