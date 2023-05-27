@@ -1,7 +1,34 @@
-import React from "react"
+import React, {useState} from "react"
 import "../Contact/contact.css"
 
+
+
 function Contact(){
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [status, setStatus] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        try {
+          const response = await fetch('/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),
+          });
+    
+          const result = await response.text();
+          setStatus(result);
+        } catch (error) {
+          console.error(error);
+          setStatus('Error sending message');
+        }
+      };
+    
     return(
         <div>
             <div className="container">
