@@ -1,10 +1,15 @@
 import React from "react"
-
+import "../Contact/contact.css"
 
 function Contact(){
     return(
         <div>
-            <h1>Contact</h1>
+            <div className="container">
+                <h1 id="title">Contact Me</h1>
+                <form>
+                    <input label="Name"></input>
+                </form>
+            </div>
         </div>
     )
 }
