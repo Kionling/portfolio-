@@ -6,9 +6,14 @@ const db = require("./models")
 const path = require("path");
 const routes = require("./routes/html-routes")
 const PORT = process.env.PORT || 6000;
+const nodemailer = require('nodemailer')
+const dotenv = require('dotenv')
+const cors = require('cors')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
+
 
 
 if (process.env.NODE_ENV === "production") {
