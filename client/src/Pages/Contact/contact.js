@@ -1,72 +1,66 @@
-import React, { useState } from "react";
-import "../Contact/contact.css";
-import axios from "axios"
-function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [status, setStatus] = useState("");
+import React, { useState } from 'react';
+import axios from 'axios';
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('/send-email', { name, email, message });
-      if (response.status === 200) {
-        setStatus('Email sent successfully');
-      } else {
-        setStatus('Error sending email');
-      }
-    } catch (error) {
-      console.error(error);
-      setStatus('Error sending email');
+const Contact = () => {
+  const [recipient, setRecipient] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  function sendMail(){
+    if(recipient && subject && message){
+      axios.post("http://localhost:4000/send_email", {
+        recipient,
+        subject, 
+        message 
+      }).then(() => alert('Message sent successfully')).catch((error)=> alert(error))
     }
+  }
+  const resetForm = () => {
+    setRecipient('');
+    setSubject('');
+    setMessage('');
   };
+
 
   return (
     <div>
-      <div className="container">
-        <div className="row">
-          <h1 id="title">Contact Me</h1>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              required
-              value={name}
-              onChange={(e) => setName(e.target.value)}></input>
-              <br />
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            ></input>
-            <br />
+      <h1>Send Email</h1>
+      <form onSubmit={sendMail}>
+        <label htmlFor="recipient">Recipient:</label>
+        <input
+          type="email"
+          id="recipient"
+          name="recipient"
+          value={recipient}
+          onChange={(e) => setRecipient(e.target.value)}
+          required
+        /><br /><br />
 
-            <label htmlFor="message">Message:</label>
-            <textarea
-              name="message"
-              id="message"
-              required
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            ></textarea>
-            <br />
+        <label htmlFor="subject">Subject:</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+          required
+        /><br /><br />
 
-            <button type="submit">Send</button>
+        <label htmlFor="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          required
+        ></textarea><br /><br />
 
-          </form>
-
-          {status && <p>{status}</p>}
-        </div>
-      </div>
+        <button disabled={isLoading}>
+          {isLoading ? 'Sending...' : 'Send Email'}
+        </button>
+      </form>
     </div>
   );
-}
+};
 
 export default Contact;
