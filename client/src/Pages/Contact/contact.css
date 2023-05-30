@@ -3,4 +3,39 @@
 
 #title{
     font-family: 'Franklin Gothic', sans-serif;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+form{
+    font-family: 'Franklin Gothic', sans-serif;
+
+}
+
+textarea{
+    height: 100px;
+    width:100%;
+}
+
+label{
+    font-family: 'Franklin Gothic', sans-serif;
+    font-size: 20px;
+}
+#imageDiv{
+    background-image: url(https://64.media.tumblr.com/00a94262f663a744703fd1866f34ae4f/tumblr_pb0tqr0wid1we9f2ro1_r1_1280.gifv);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 580px;
+    margin: 0;
+    padding: 0;
+}
+
+#recipient{
+    font-family: 'Franklin Gothic', sans-serif;
+
+}
+
+#subject{
+    font-family: 'Franklin Gothic', sans-serif;
+
 }

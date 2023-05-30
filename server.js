@@ -1,5 +1,4 @@
 const express = require("express");
-const sequelize = require("sequelize");
 const app = express();
 const mysql = require("mysql");
 const db = require("./models");
@@ -9,6 +8,7 @@ const PORT = process.env.PORT || 4000;
 const dotenv = require("dotenv");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const sequelize = require('sequelize')
 
 dotenv.config();
 
@@ -34,10 +34,11 @@ function sendMail(recipient, subject, message) {
       },
     });
     const mailOptions = {
-      from: process.env.DESTINATION_EMAIL, // Sender address
-      to: recipient, // Recipient address
+      from: recipient, // Sender address
+      to: process.env.DESTINATION_EMAIL, // Recipient address
       subject: subject, // Email subject
-      text: message, // Plain text body
+      text: message,
+      html: `<h1>${recipient}</h1><p>${subject}</p><p>${message}</p>` // Plain text body
     };
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
@@ -61,7 +62,6 @@ app.get("/", (req, res) => {
 
 app.post("/send_email", (req, res) => {
   const { recipient, subject, message } = req.body;
-
   sendMail(recipient, subject, message)
     .then(() => res.status(200).send("Email sent successfully."))
     .catch((error) => {

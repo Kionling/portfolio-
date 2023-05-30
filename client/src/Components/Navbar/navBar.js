@@ -1,7 +1,7 @@
 import { React, useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
-import { DarkModeContext } from "../darkMode/darkModeContext";
+
 function Navbar() {
   const [navLinks, setNavLinks] = useState([
     { path: "/portfolio", label: "Portfolio", className: ""},
@@ -20,7 +20,7 @@ function Navbar() {
     });
     setNavLinks(newNavLinks);
   }, [location]);
-const {darkMode} = useContext(DarkModeContext)
+
   return (
     <div className="">
       <div className="container" >

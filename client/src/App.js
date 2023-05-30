@@ -7,18 +7,14 @@ import Navbar from './Components/Navbar/navBar';
 import Portfolio from './Pages/Portfolio/portfolio';
 import Contact  from './Pages/Contact/contact';
 import Today from './Components/Moment/moment';
-import { DarkModeProvider } from './Components/darkMode/darkModeContext';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
-import ExampleComponent from './Components/darkMode/darkMode';
 function App() {
   return (
-    <DarkModeProvider>
     <Router>
-      {/* <ExampleComponent/> */}
       <Navbar/>
       <Routes>
         <Route exact path='/portfolio' element={<Portfolio/>}/>
@@ -28,7 +24,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
-    </DarkModeProvider>
+
   );
 }
 
