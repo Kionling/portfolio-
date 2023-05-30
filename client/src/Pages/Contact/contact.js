@@ -45,7 +45,7 @@ const Contact = () => {
 
   return (
     <div>
-      <div className="row #651fff deep-purple accent-3" id="formContainer">
+      <div className="row #7986cb indigo lighten-1" id="formContainer">
         <div className=" col s12 l6">
           <h1 id="title" className="container">
             Send Email
@@ -92,10 +92,23 @@ const Contact = () => {
             <br />
             <br />
 
-            <button className="btn waves-effect waves-light" type="submit">Send Email</button>
+            <button className="btn waves-effect waves-light " type="submit" id="sendButton">Send Email</button>
           </form>
         </div>
-        <div className="col s12 l6" id="imageDiv"></div>
+        <div className="col s6 l6" id="imageDiv"></div>
+      </div>
+      <div className="row container" id="contact2">
+       <div className="col s6 l4">
+        <p id="phoneNum">To Contact Me In Another Way Call (209)-395-9325 📱 <br></br> Open To Call Between 7AM-6PM PST.</p>
+       </div>
+       <div className="col s6 l8 ">
+        <p id="phoneNum">Feel free to follow me here!</p>
+        <ul>
+          <li className="listText"><a href="https://www.instagram.com/kionlingg/">Instagram 🎥</a></li>
+          <li className="listText"><a href="https://github.com/Kionling">Github👨‍💻</a></li>
+          <li className="listText"><a href="https://www.youtube.com/channel/UCn2WHNEZLdkWNx1dbkLRFpA">YouTube 🔬</a></li>
+        </ul>
+       </div>
       </div>
     </div>
   );
