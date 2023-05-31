@@ -1,22 +1,25 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import "../About/about.css";
-
+import { useLocation } from "react-router-dom";
 function About() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <div className="defaultText">
       <div className="#000000 black centerText" id="aboutBanner">
-
         <div className="center">
           <div className="row">
             <div className="col s12 l12">
               <h3 className="white-text">Born in San Jose, California</h3>
-
             </div>
           </div>
           <div className="row">
             <div className="col s12 l12">
-              <h3  className="white-text">Raised in Lathrop, California</h3>
-
+              <h3 className="white-text">Raised in Lathrop, California</h3>
             </div>
           </div>
         </div>
@@ -47,10 +50,16 @@ function About() {
           Actively looking for entry-level and internship positions that will
           allow me to grow as a Developer and person.
         </p>
-        <h3>Currently a Computer Science Major at San Joaquin Delta College.</h3>
-        <p>To satisy my passion and interest behind the science of Software Engineering, </p>
+        <h3>
+          Currently a Computer Science Major at San Joaquin Delta College.
+        </h3>
         <p>
-          I am continuing my studies at SJDC and looking to transfer to colleges in the Bay area to continue my coding journey.
+          To satisy my passion and interest behind the science of Software
+          Engineering,{" "}
+        </p>
+        <p>
+          I am continuing my studies at SJDC and looking to transfer to colleges
+          in the Bay area to continue my coding journey.
         </p>
       </div>
     </div>
