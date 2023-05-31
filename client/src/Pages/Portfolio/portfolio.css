@@ -1,0 +1,48 @@
+
+  
+  
+  #spanWeight {
+      font-family: 'Franklin Gothic', sans-serif;
+  }
+  
+  #cardDiv {
+      border-radius: 20px;
+  }
+  
+  #projectHIKRDiv {
+  margin: 0;
+  }
+  
+  #portfolioBanner {
+      height: 700px;
+      background-image: url(./assets/welcomeBan.gif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+  }
+  
+  #bannerTitle {
+      margin-bottom: 50px;
+  }
+  
+  #bannerImage {
+      width: 20%;
+  }
+  
+  #parallaxText {
+      text-align: center;
+  }
+  
+  #seeMore {
+      color: white;
+    font-family: 'Franklin Gothic', sans-serif;
+      margin-top: 10%;
+  }
+  
+  #wantToSee {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      background-image: url(./assets/trainMoving.gif) ;
+  } 
