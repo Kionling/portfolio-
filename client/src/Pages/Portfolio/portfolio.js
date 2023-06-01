@@ -6,10 +6,7 @@ import PlanNJam from "./assets/planN.png";
 import EmployeeGen from "./assets/password.png";
 import PC from "./assets/pc.png";
 import Weather from "./assets/weatherDash.png";
-import Train from "./assets/trainMoving.gif";
-import { Link } from "react-router-dom";
-import Shoppr from "./assets/shoppr (1).png";
-import moment from "moment";
+
 
 function Portfolio() {
   return (
