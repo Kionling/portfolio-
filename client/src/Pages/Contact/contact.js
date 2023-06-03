@@ -117,6 +117,11 @@ const Contact = () => {
         </ul>
        </div>
       </div>
+      <div className="row container">
+        <div className="col l12 center">
+          <h1 id="thankYou">Thank You For Contacting Me!</h1>
+        </div>
+      </div>
     </div>
   );
 };
