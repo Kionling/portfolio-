@@ -94,8 +94,8 @@
 #secondImage{
   height: 250px;
   background-size: cover;
-  background-image: url(../Home/assets/nostalgia.jpg);
-  background-position: center;
+  background-image: url(../Home/assets/deskTop.jpg);
+  background-position: 50% 40%;
   background-repeat: no-repeat;
 }
 
@@ -108,6 +108,14 @@
   margin: 0;
 }
 
+#thirdimage{
+  height: 250px;
+  background-size: cover;
+  background-image: url(../Home/assets/danImage-min.jpg);
+  background-position: 70% 40%;
+  background-repeat: no-repeat;
+  margin: 0;
+}
 
 #peaceTag{
   margin: 0;

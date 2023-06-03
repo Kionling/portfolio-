@@ -19,7 +19,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="row #ff1744 red accent-3" id="firstBanner">
+      <div className="row #01579b light-blue darken-3 " id="firstBanner">
         <div id="textDiv" className="col s7 l4">
           <div className="container">
             <Link to="/portfolio">
@@ -39,7 +39,7 @@ function Home() {
         <div className=" col s5 l8" id="firstImage"></div>
       </div>
 
-      <div className="row #aa00ff purple accent-4" id="secondBanner">
+      <div className="row #00e676 green accent-3" id="secondBanner">
         <div className="col s5 l8" id="secondImage"></div>
         <div className=" col s7 l4">
           <div className="">
@@ -57,7 +57,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="row #651fff deep-purple accent-3" id="thirdBanner">
+      <div className="row #ff5722 deep-orange" id="thirdBanner">
         <div id="textDiv" className="col s7 l4">
           <Link to="/about">
             <div className="container">
@@ -76,7 +76,7 @@ function Home() {
             </div>
           </Link>
         </div>
-        <div className=" col s5 l8" id="firstImage"></div>
+        <div className=" col s5 l8" id="thirdimage"></div>
       </div>
 
       <div className="row" id="lastBanner">
