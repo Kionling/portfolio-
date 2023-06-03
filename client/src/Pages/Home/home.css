@@ -3,9 +3,9 @@
 
 #mainBanner {
   height: 400px;
-  background-image: url(../Home/assets/chanceCompressed.jpeg);
+  background-image: url(../Home/assets/pixelMario.gif);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 80%;
   background-size: cover;
 }
 
