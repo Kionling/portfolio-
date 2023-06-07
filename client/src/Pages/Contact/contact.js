@@ -31,7 +31,7 @@ const Contact = () => {
     console.log(recipient, message, subject)
     if (recipient && subject && message) {
       axios
-        .post("http://localhost:4000/send_email", {
+        .post("/send_email", {
           recipient,
           subject,
           message,
