@@ -28,7 +28,7 @@ function Footer() {
             </div>
             <div className="footer-copyright">
                 <div className="container">
-                    © 2023 Daniel Jauregui.
+                    © 2023 Daniel Jauregui
                     <a className="grey-text text-lighten-4 right" href="#!">More Links</a>
                 </div>
             </div>
