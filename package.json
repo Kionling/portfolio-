@@ -11,7 +11,7 @@
         "client": "cd client && npm run start",
         "install": "cd client && npm install",
         "build": "cd client && npm run build",
-        "heroku-postbuild": "cd client && npm install && npm run build && ../ && npm install"
+        "heroku-postbuild": "npm run build"
     },
     "repository": {
         "type": "git",
@@ -38,7 +38,9 @@
         "react-lazyload": "^3.2.0",
         "react-router-dom": "^6.10.0",
         "sequelize": "^6.30.0",
-        "sequelize-cli": "^6.6.0"
+        "sequelize-cli": "^6.6.0",
+        "if-env": "^1.0.4",
+        "nodemon": "^2.0.22"
     },
     "devDependencies": {
         "concurrently": "^8.1.0",
