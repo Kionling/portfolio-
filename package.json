@@ -40,7 +40,8 @@
         "sequelize": "^6.30.0",
         "sequelize-cli": "^6.6.0",
         "if-env": "^1.0.4",
-        "nodemon": "^2.0.22"
+        "nodemon": "^2.0.22",
+        "concurrently": "^8.1.0"
     },
     "devDependencies": {
         "concurrently": "^8.1.0",
