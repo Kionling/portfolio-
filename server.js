@@ -23,7 +23,7 @@ app.use(express.json());
 function sendMail(recipient, subject, message) {
   return new Promise((resolve, reject) => {
     const transporter = nodemailer.createTransport({
-      service: "Outlook",
+      service: "Gmail",
       auth: {
         user: process.env.EMAIL_USERNAME,
         pass: process.env.EMAIL_PASSWORD
