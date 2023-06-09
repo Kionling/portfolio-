@@ -40,7 +40,7 @@ const Contact = () => {
     if (recipient && subject && message) {
       return new Promise((resolve, reject) => {
         axios
-          .post("/send_email", {
+          .post("http://localhost:4000/send_email", {
             recipient,
             subject,
             message,
