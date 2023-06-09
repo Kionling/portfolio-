@@ -31,7 +31,7 @@ const Contact = () => {
     console.log(recipient, message, subject)
     if (recipient && subject && message) {
       axios
-        .post("/send_email", {
+        .post("https://kionling.herokuapp.com/send-mail", {
           recipient,
           subject,
           message,
