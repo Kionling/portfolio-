@@ -36,19 +36,27 @@ const Contact = () => {
   const sendMail = async (e) => {
     e.preventDefault();
     console.log(recipient, message, subject);
-  
-    if (!recipient || !subject || !message) {
-      console.error("Missing required fields.");
-      return;
-    }
-  
-    try {
-      await axios.post("/send_email", { recipient, subject, message });
-      resetForm();
-      setEmailCount(emailCount + 1);
-      console.log(emailCount); 
-    } catch (error) {
-      console.error("Error sending email:", error);
+    
+    if (recipient && subject && message) {
+      return new Promise((resolve, reject) => {
+        axios
+          .post("http://localhost:4000/send_email", {
+            recipient,
+            subject,
+            message,
+          })
+          .then(() => {
+            resetForm();
+            setEmailCount(emailCount + 1);
+            console.log(emailCount); // Increment emailCount after successful email sending
+            resolve(); // Resolve the Promise after successful email sending
+          })
+          .catch((error) => {
+            reject(error); // Reject the Promise if there's an error
+          });
+      });
+    } else {
+      return Promise.reject(new Error("Missing required fields."));
     }
   };
   
