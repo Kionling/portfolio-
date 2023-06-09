@@ -30,8 +30,8 @@ const Contact = () => {
     e.preventDefault();
     console.log(recipient, message, subject)
     if (recipient && subject && message) {
-      axios
-        .post("http://localhost:4000/send_email", {
+      axios    //change this to /send_email
+        .post("/send_email", {
           recipient,
           subject,
           message,
