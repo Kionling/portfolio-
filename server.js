@@ -32,7 +32,7 @@ function sendMail(recipient, subject, message) {
     const mailOptions = {
       from: recipient, // Sender address
       to: process.env.DESTINATION_EMAIL, // Recipient address
-      subject: subject, // Email subject
+      subject: subject, // Email subjecta
       text: message,
       html: `<h1>${recipient}</h1><p>${subject}</p><p>${message}</p>` // Plain text body
     };
