@@ -26,6 +26,13 @@ const Contact = () => {
     localStorage.setItem("emailCount", emailCount.toString());
   }, [emailCount]);
 
+
+  const resetForm = () => {
+    setRecipient("");
+    setSubject("");
+    setMessage("");
+  };
+
   function sendMail(e) {
     e.preventDefault();
     console.log(recipient, message, subject);
@@ -54,11 +61,6 @@ const Contact = () => {
   }
   
 
-  const resetForm = () => {
-    setRecipient("");
-    setSubject("");
-    setMessage("");
-  };
 
   return (
     <div>
