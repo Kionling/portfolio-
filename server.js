@@ -12,14 +12,10 @@ const sequelize = require('sequelize')
 
 dotenv.config();
 
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use((req, res, next)=>{
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  next();
-})
 app.use(express.static(path.join(__dirname, 'client/build')));
-app.use(cors());
 
 // Other routes and middleware
 app.use(routes);
@@ -30,7 +26,7 @@ function sendMail(recipient, subject, message) {
       service: "Gmail",
       auth: {
         user: process.env.EMAIL_USERNAME,
-        pass: process.env.EMAIL_PASSWORD,
+        pass: process.env.EMAIL_PASSWORD
       },
     });
     const mailOptions = {
@@ -44,21 +40,15 @@ function sendMail(recipient, subject, message) {
       if (error) {
         console.log("Error:", error);
         res.status(500).send("Error sending email.");
+        reject(error);
       } else {
         console.log("Email sent:", info.response);
         res.status(200).send("Email sent successfully.");
+        resolve(info);
       }
     });
   });
 }
-
-app.get("/", (req, res) => {
-  sendMail().then((response) =>
-    res
-      .send(response.message)
-      .catch((error) => res.status(500).send(error.message))
-  );
-});
 
 app.post("/send_email", (req, res) => {
   const { recipient, subject, message } = req.body;
@@ -74,10 +64,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-
-
 db.sequelize.sync().then(function () {
   app.listen(PORT, () => {
-    console.log(` 🙌😈🌝  app is now listening on ${PORT}`);
+    console.log(`🙌😈🌝  app is now listening on ${PORT}`);
   });
 });
+
