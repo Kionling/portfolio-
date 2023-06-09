@@ -15,15 +15,15 @@ dotenv.config();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'client/build')));
+// app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Other routes and middleware
-app.use(routes);
+// app.use(routes);
 
 function sendMail(recipient, subject, message) {
   return new Promise((resolve, reject) => {
     const transporter = nodemailer.createTransport({
-      service: "Gmail",
+      service: "Outlook",
       auth: {
         user: process.env.EMAIL_USERNAME,
         pass: process.env.EMAIL_PASSWORD
@@ -60,9 +60,9 @@ app.post("/send_email", (req, res) => {
     });
 });
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+// }
 
 db.sequelize.sync().then(function () {
   app.listen(PORT, () => {
