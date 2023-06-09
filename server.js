@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Other routes and middleware
-// app.use(routes);
+app.use(routes);
 
 function sendMail(recipient, subject, message) {
   return new Promise((resolve, reject) => {
