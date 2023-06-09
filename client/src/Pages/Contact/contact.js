@@ -26,29 +26,41 @@ const Contact = () => {
     localStorage.setItem("emailCount", emailCount.toString());
   }, [emailCount]);
 
-  function sendMail(e) {
-    e.preventDefault();
-    console.log(recipient, message, subject)
-    if (recipient && subject && message) {
-      axios    //change this to /send_email
-        .post("http://localhost:4000/send_email", {
-          recipient,
-          subject,
-          message,
-        }).then(() => {
-          resetForm();
-          setEmailCount(emailCount + 1);
-          console.log(emailCount) // Increment emailCount after successful email sending
-        })
-        .catch((error) => alert(error))
-    }
-  }
 
   const resetForm = () => {
     setRecipient("");
     setSubject("");
     setMessage("");
   };
+
+  function sendMail(e) {
+    e.preventDefault();
+    console.log(recipient, message, subject);
+    
+    if (recipient && subject && message) {
+      return new Promise((resolve, reject) => {
+        axios
+          .post("/send_email", {
+            recipient,
+            subject,
+            message,
+          })
+          .then(() => {
+            resetForm();
+            setEmailCount(emailCount + 1);
+            console.log(emailCount); // Increment emailCount after successful email sending
+            resolve(); // Resolve the Promise after successful email sending
+          })
+          .catch((error) => {
+            reject(error); // Reject the Promise if there's an error
+          });
+      });
+    } else {
+      return Promise.reject(new Error("Missing required fields."));
+    }
+  }
+  
+
 
   return (
     <div>
