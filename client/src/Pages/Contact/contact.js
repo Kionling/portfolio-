@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import "../Contact/contact.css";
-import API from "../../API/api"
-
 
 const Contact = () => {
   const location = useLocation();
@@ -42,7 +40,7 @@ const Contact = () => {
     if (recipient && subject && message) {
       return new Promise((resolve, reject) => {
         axios
-          .post("/send_email", {
+          .post("http://localhost:4000/send_email", {
             recipient,
             subject,
             message,
