@@ -17,6 +17,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
+const corsOptions = {
+  origin: "http://kionling.herokuapp.com",
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 // Other routes and middleware
 app.use(routes);
 
