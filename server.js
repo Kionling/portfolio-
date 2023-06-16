@@ -15,7 +15,7 @@ dotenv.config();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Other routes and middleware
 app.use(routes);
