@@ -10,11 +10,11 @@ const transporter = nodemailer.createTransport({
 
 function mailOptions(form) {
     let mailOptions = {
-    from: form.recipient, // Sender address
+    from: form.email, // Sender address
     to: process.env.DESTINATION_EMAIL, // Recipient address
     subject: form.subject, // Email subjecta
     text: form.message,
-    html: `<h1>${form.recipient}</h1><p>${form.subject}</p><p>${form.message}</p>` // Plain text body
+    html: `<h1>${form.email}</h1><p>${form.subject}</p><p>${form.message}</p>` // Plain text body
     }
     console.log(mailOptions)
     return mailOptions
