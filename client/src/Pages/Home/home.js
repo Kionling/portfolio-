@@ -13,9 +13,11 @@ function Home() {
     <div>
       <div id="mainBanner">
         <div className="row bold centerText" id="firstBanText">
+          <Link to="/portfolio">
           <h3 className="white-text" id="firstTxt">
             The Newest Project<span id="period">.</span>
           </h3>
+          </Link>
         </div>
       </div>
 

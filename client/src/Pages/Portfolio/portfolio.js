@@ -5,7 +5,6 @@ import PlanNJam from "./assets/planN.png";
 import PC from "./assets/PCPARTS.png";
 import Weather from "./assets/weatherDash.png";
 
-
 function Portfolio() {
   return (
     <div className="">
@@ -35,14 +34,18 @@ function Portfolio() {
                   First Group Project<i class="material-icons right">close</i>
                 </span>
                 <p>
-                  This was my first group project. Royce williams and Liza
-                  Poliachenko were my partners and they handled the back-end
-                  functionality of this project. I worked on the front-end
-                  entirely by myself. No help. Nothing. Just me. I'm definitely
-                  proud of the work I've done in this project. Take a look for
-                  yourself! Are you in need of a planner? Are you disorganized?
-                  Look no further, Plan N' Jam ensures, "If there's a plan, then
-                  there's a Jam!"
+                  This project marked my first experience working on a group
+                  collaboration. Royce Williams and Liza Poliachenko played
+                  integral roles in developing the project's back-end
+                  functionality, while I took full ownership of the front-end
+                  implementation. Throughout the process, I faced the challenge
+                  head-on, working diligently and independently to bring the
+                  vision to life. The sense of accomplishment I feel for my
+                  contributions to this project is undeniable. I invite you to
+                  explore it yourself! If you find yourself in need of a planner
+                  or struggling with disorganization, look no further than Plan
+                  N' Jam. We firmly believe that with a solid plan in place,
+                  success and enjoyment are guaranteed.
                 </p>
               </div>
             </div>
@@ -71,10 +74,14 @@ function Portfolio() {
                   APIs...Apple Pie<i class="material-icons right">close</i>
                 </span>
                 <p>
-                  My first time using APIs. Third party that is. It was so easy
-                  and exciting! I was really happy with the look and
-                  functionality. The back-end portion of saving information was
-                  the hardest to do, but I loved it.
+                  During my initial foray into utilizing third-party APIs, I
+                  found the experience to be remarkably seamless and
+                  invigorating. The effortless integration and resulting
+                  aesthetics, alongside the commendable functionality, left me
+                  thoroughly content. Admittedly, the back-end aspect pertaining
+                  to data preservation presented the most arduous challenge;
+                  however, such intricacy only served to further cultivate my
+                  enthusiasm.
                 </p>
               </div>
             </div>
@@ -103,10 +110,16 @@ function Portfolio() {
                       <i class="material-icons right">close</i>
                     </span>
                     <p>
-                      With the new given concept of handlebars and mysql, we are
-                      given a task to use both of them. This project is created
-                      simply by using mysql, express, and handlebars to create a
-                      pc build organizer for the user.
+                      Utilizing Express Handlebars and MySQL for the first time,
+                      this project displays the technolgies working
+                      simultaneously together. The application has many use
+                      cases but this one in particular is made for users who are
+                      looking to build a Personal Computer for themselves for
+                      the first time. The application uses MySQL as a relational
+                      database to store the user's selected computer parts. The
+                      front-end is created using Express Handlebars and uses
+                      conditional statements to determine whether the part is
+                      bought of still on list. 
                     </p>
                   </div>
                 </div>
@@ -146,8 +159,6 @@ function Portfolio() {
           </h1>
         </div>
       </div>
-
-      
     </div>
   );
 }
