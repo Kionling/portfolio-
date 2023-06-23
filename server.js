@@ -3,7 +3,8 @@ const app = express();
 const mysql = require("mysql");
 const db = require("./models");
 const path = require("path");
-const routes = require("./routes/html-routes");
+const routes = require("./routes/contact-routes")
+const routesHtml = require('./routes/html-routes')
 const PORT = process.env.PORT || 4000;
 const dotenv = require("dotenv");
 const cors = require("cors");
@@ -24,6 +25,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 // Other routes and middleware
 app.use(routes);
+app.use(routesHtml)
 
 function sendMail(recipient, subject, message) {
   return new Promise((resolve, reject) => {

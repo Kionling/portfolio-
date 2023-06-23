@@ -1,64 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import "../Contact/contact.css";
-
-const Contact = () => {
+import API from "../../API/api"
+function Contact(){
   const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+
+  const emailRef = useRef();
+  const subjectRef = useRef();
+  const messageRef = useRef();
+
+
+  function resetForm(){
+      emailRef.current.value = ''
+      subjectRef.current.value = ''
+      messageRef.current.value = ''
+  }
+
+  function sendMail(event){
+    event.preventDefault();
+    let postData = {
+      email: emailRef.current.value, 
+      subject: subjectRef.current.value, 
+      message: messageRef.current.value
+    }
+    console.log(postData)
+    API.sendMail(postData).then((res) =>{
+      console.log(res)
+      resetForm();
+    })
+  }
   
-  const [recipient, setRecipient] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [emailCount, setEmailCount] = useState(0);
-
-  useEffect(() => {
-    const storedEmailCount = localStorage.getItem("emailCount");
-    if (storedEmailCount) {
-      setEmailCount(Number(storedEmailCount));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("emailCount", emailCount.toString());
-  }, [emailCount]);
-
-
-  const resetForm = () => {
-    setRecipient("");
-    setSubject("");
-    setMessage("");
-  };
-
-  const sendMail = async (e) => {
-    e.preventDefault();
-    console.log(recipient, message, subject);
-    
-    if (recipient && subject && message) {
-      return new Promise((resolve, reject) => {
-        axios
-          .post("/send_email", {
-            recipient,
-            subject,
-            message,
-          })
-          .then(() => {
-            resetForm();
-            setEmailCount(emailCount + 1);
-            console.log(emailCount); // Increment emailCount after successful email sending
-            resolve(); // Resolve the Promise after successful email sending
-          })
-          .catch((error) => {
-            reject(error); // Reject the Promise if there's an error
-          });
-      });
-    } else {
-      return Promise.reject(new Error("Missing required fields."));
-    }
-  };
   
   
 
@@ -78,8 +55,7 @@ const Contact = () => {
               type="email"
               id="recipient"
               name="recipient"
-              value={recipient}
-              onChange={(e) => setRecipient(e.target.value)}
+              ref={emailRef}
               required
             />
             <br />
@@ -92,8 +68,7 @@ const Contact = () => {
               type="text"
               id="subject"
               name="subject"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
+              ref={subjectRef}
               required
             />
             <br />
@@ -105,8 +80,7 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              ref={messageRef}
               required
             ></textarea>
             <br />
