@@ -16,6 +16,7 @@ function mailOptions(form) {
     text: form.message,
     html: `<h1>${form.recipient}</h1><p>${form.subject}</p><p>${form.message}</p>` // Plain text body
     }
+    console.log(mailOptions)
     return mailOptions
   };
 
