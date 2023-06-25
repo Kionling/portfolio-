@@ -1,8 +1,9 @@
 # Daniel's React.js Portfolio
-This project is the React.js version of my first portfolio. This website included all the projects I have worked, about me page, and a contact page that utilizes nodemailer's email services. This page showcases my front-end and back-end capabilities and will continuously be updated. The blog page is currently underdevelopment and will be one of the features of this website. Feel free to contact me using the contact page on my site! 
+This project is the React.js version of my first portfolio. This website included all the projects I have worked, about me page, and a contact page that utilizes nodemailer's email services. This page showcases my front-end and back-end capabilities and will continuously be updated. The blog page is currently underdevelopment and will be one of the features of this website. Feel free to contact me using the contact page on my site!
 
 # Site Picture 
-![Top of page](/readMeAssets/minGIf.gif)
+![Top of page](/readMeAssets/top.png)
+![Contact page](/readMeAssets/contact.png)
 
 
 ## Technologies
